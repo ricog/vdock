@@ -34,3 +34,16 @@ Or you can keep a watcher running with:
 
     vagrant rsync-auto php
 
+## Troubleshooting Docker
+
+If things go wrong with your `vagrant` commands, it is possible for docker
+containers to get left in the host. No worries. You can access the docker
+host directly. Find the vagrant host id. It will be labelled as the
+"default" vm in your vdock path.
+
+    vagrant global-status
+
+With that you can `ssh` directly into the host vm and issue docker commands.
+
+    vagrant ssh <host id>
+
